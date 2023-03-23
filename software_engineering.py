@@ -3,6 +3,11 @@ def encode(password):
     return new_password
 
 
+def decode(new_password):
+    password = [num - 3 for num in new_password]
+    return password
+
+
 def main():
     while True:
         print("Menu\n-------------")
@@ -16,6 +21,9 @@ def main():
             print()
         # user selection 2
         if user_selection == 2:
+            new_password = encode(password)
+            password = decode(new_password)
+
             new_password = ''.join(str(i) for i in encode(password))
             password = ''.join(str(i) for i in password)
             print(f'The new password is {new_password}, and the original password is {password}.')
