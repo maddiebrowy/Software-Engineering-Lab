@@ -15,6 +15,11 @@ def main():
             print("Your password has been encoded and stored!")
             print()
         # user selection 2
+        if user_selection == 2:
+            new_password = ''.join(str(i) for i in encode(password))
+            password = ''.join(str(i) for i in password)
+            print(f'The new password is {new_password}, and the original password is {password}.')
+            print()
 
 
 if __name__ == "__main__":
